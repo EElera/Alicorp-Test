@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { OrdersService } from 'src/app/shared/orders.service';
 
 @Component({
   selector: 'app-orders',
@@ -7,39 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrdersComponent implements OnInit {
 
-  constructor() { }
+  constructor(public orderService: OrdersService) { }
 
-  products = [
-    {
-      code: 1,
-      name: 'ABC',
-      description: 'ABCABC',
-    },
-    {
-      code: 2,
-      name: 'QWE',
-      description: 'QWEQWE',
-    },
-    {
-      code: 3,
-      name: 'ASD',
-      description: 'ASDASD',
-    },
-    {
-      code: 4,
-      name: 'ZXC',
-      description: 'ZXCZXC',
-    },
-    {
-      code: 5,
-      name: 'CVB',
-      description: 'CVBCVB',
-    }
-  ]
 
   appName: string = 'ALICORP';
 
-  ngOnInit(): void {
+  ngOnInit() {
+  }
+
+  onSubmit() {
+    console.log('this.orderService.form.value: ', this.orderService.form.value);
+    let data = this.orderService.form.value;
+    this.orderService.createOrder(data);
+    this.orderService.form.reset();
   }
 
 }
