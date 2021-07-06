@@ -1,0 +1,12 @@
+.header-app {
+    text-align: center;
+}
+
+.name-company {
+    font-size: 2rem;
+}
+
+tr {
+    float: left;
+    margin: 0 0.5rem 0 0.5rem;
+}

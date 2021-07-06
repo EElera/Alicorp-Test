@@ -1,0 +1,32 @@
+<div class="header-app">
+    <h1>LISTADO TEST</h1>
+    <h2 class="name-company">{{appName}}</h2>
+</div>
+<div class="add-list">
+    
+    <form>
+        <table cellspacing="0">
+            <tr>
+                <mat-form-field>
+                    <input matInput #codeProduct maxlength="5" placeholder="Código del producto">
+                </mat-form-field>
+            </tr>
+            <tr>
+                <mat-form-field>
+                    <input matInput #nameProduct maxlength="50" placeholder="Nombre del producto">
+                </mat-form-field>
+            </tr>
+            <tr>
+                <mat-form-field>
+                    <input matInput #descriptionProduct maxlength="250" placeholder="Descripción del producto">
+                </mat-form-field>
+            </tr>
+            <tr valign="center">
+                <button mat-raised-button color="primary" class="addToList">
+                    Agregar
+                </button>
+            </tr>
+        </table>
+    </form>
+    
+</div>
