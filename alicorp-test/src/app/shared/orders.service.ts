@@ -27,7 +27,7 @@ export class OrdersService {
     codeProduct: new FormControl(''),
     nameProduct: new FormControl(''),
     descriptionProduct: new FormControl(''),
-    completed: new FormControl(false)
+    // completed: new FormControl(false)
   });
 
   getOrders() {

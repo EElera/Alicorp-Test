@@ -36,8 +36,9 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "name": "main",
+                  "maximumWarning": "250kb",
+                  "maximumError": "500kb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -98,9 +99,21 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
   },
-  "defaultProject": "alicorp-test"
+  "defaultProject": "alicorp-test",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }
